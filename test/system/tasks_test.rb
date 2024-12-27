@@ -7,15 +7,13 @@ class TasksTest < ApplicationSystemTestCase
 
   test "visiting the index" do
     visit tasks_url
-    assert_selector "h1", text: "Tasks"
+    assert_selector "h2", text: "Tasks"
   end
 
   test "should create task" do
     visit tasks_url
-    click_on "New task"
 
     fill_in "Description", with: @task.description
-    fill_in "Status", with: @task.status
     fill_in "Title", with: @task.title
     click_on "Create Task"
 
